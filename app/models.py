@@ -6,9 +6,9 @@ class Book(models.Model):
     author = models.CharField(max_length=50)
     in_stock = models.IntegerField()
 
-    def remaining_stock(self):
-        library = Library.objects.filter(book=self)
-        return library.total_books - self.in_stock
+    # def remaining_stock(self):
+    #     library = Library.objects.filter(book=self)
+    #     return library.total_books - self.in_stock
 
     def __str__(self):
         return self.title
