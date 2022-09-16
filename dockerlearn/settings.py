@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import environ
+import secrets
 from pathlib import Path
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
@@ -29,8 +30,7 @@ environ.Env.read_env()
 # SECRET_KEY = env("SECRET_KEY")
 # DEBUG = env("DEBUG")
 # for github workflow
-SECRET_KEY = os.environ.get("SECRET_KEY")
-print(SECRET_KEY)
+SECRET_KEY = secrets.token_hex(25)
 DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "dockerlearn-v1.herokuapp.com"]
 
