@@ -24,11 +24,11 @@ jobs:
           flake8
       - name: Unit Test
         env:
-          SECRET_KEY: "qf6b9t#)en32989p#hleh8v9)8@*ga4g1di%5p%-#0i$6qbzzo"
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
           DEBUG: True
-          AWS_ACCESS_KEY_ID: AKIA54IURWVMYKBWFXFT
-          AWS_SECRET_ACCESS_KEY: 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
-          AWS_STORAGE_BUCKET_NAME: djangodocker
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_STORAGE_BUCKET_NAME: ${{ secrets.AWS_STORAGE_BUCKET_NAME }}
         run: |
           python manage.py test
       - name: Coverage report
