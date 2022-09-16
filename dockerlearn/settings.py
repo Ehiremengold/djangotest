@@ -26,7 +26,7 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# for docker  
+# for docker
 # SECRET_KEY = env("SECRET_KEY")
 # for github workflow
 SECRET_KEY = os.environ.get("SECRET_KEY")
