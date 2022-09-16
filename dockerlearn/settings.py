@@ -30,6 +30,7 @@ environ.Env.read_env()
 # DEBUG = env("DEBUG")
 # for github workflow
 SECRET_KEY = os.environ.get("SECRET_KEY")
+print(SECRET_KEY)
 DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "dockerlearn-v1.herokuapp.com"]
 
