@@ -24,7 +24,7 @@ jobs:
           flake8
       - name: Unit Test
         env:
-          SECRET_KEY: qf6b9t#)en32989p#hleh8v9)8@*ga4g1di%5p%-#0i$6qbzzo
+          SECRET_KEY: "qf6b9t#)en32989p#hleh8v9)8@*ga4g1di%5p%-#0i$6qbzzo"
           DEBUG: True
           AWS_ACCESS_KEY_ID: AKIA54IURWVMYKBWFXFT
           AWS_SECRET_ACCESS_KEY: 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
