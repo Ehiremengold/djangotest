@@ -26,7 +26,10 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+# for docker  
+# SECRET_KEY = env("SECRET_KEY")
+# for github workflow
+SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = env("DEBUG")
 ALLOWED_HOSTS = ["127.0.0.1", "dockerlearn-v1.herokuapp.com"]
 
